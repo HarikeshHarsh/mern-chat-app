@@ -17,7 +17,8 @@ export const SocketContextProvider = ({ children }) => {
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("https://localhost5000", {
+			const socket = io("https://charlie-chat-app.onrender.com", {
+			
 				query: {
 					userId: authUser._id,
 				},
